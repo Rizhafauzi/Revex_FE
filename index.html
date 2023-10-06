@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Website</title>
+    <link rel="icon" href="./assets/logo-navbar.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="./assets/logo-navbar-orange.png" id="logoNav" width="100px" alt=""><span></span></a>
+        <div class="menuToggle" onclick="toggleMenu()"></div>
+        <ul class="navigation">
+            <li><a href="#" id="home-link" class="active">Home</a></li>
+            <li><a href="#centered-services" id="services-link">Services</a></li>
+            <li><a href="#fitur" id="fitur-link">Fitur</a></li>
+            <li><a href="#contact-us" id="about-link">Contact Us</a></li>
+            <li><a href="./login/login.html"id="login-link">Login</a></li>
+        </ul>
+    </header>
+    <div class="container">
+        <section class="banner" id="banner">
+            <div class="content">
+                <h2>Welcome to RevExpresss</h2>
+                <p>Your Trusted Shipping Partner</p>
+                <a href="#centered-services" class="btn">Learn More</a>
+            </div>
+            <div class="hasTag">
+                <h3 style="color: #fff;">Kemana Saja,</h3>
+                <h3 style="color: #FAB95B;">Kapan Saja</h3>
+            </div>
+        </section>
+        <section id="centered-services">
+            <div class="centered-services">
+                <button class="btn" onclick="fitur('cekResi')">Trace and Track</button>
+                <button class="btn" onclick="fitur('cekTarif')">Check Rates</button>
+            </div>
+            <div id="cekResi" class="w3-container fitur">
+            <div class="resi-form-container">
+                <div class="resi-form">
+                    <h3>Lacak Paket</h3>
+                    <input class="btn" type="number" id="tracking-resi" style="margin-bottom: 10px;" required> <br>
+                    <button class="button" onclick="fetchResiById()">Track</button> 
+                    <div id="resi-details"></div>
+                </div>
+            </div>
+            
+            <div id="cekTarif" class="w3-container fitur" style="display:none">
+                <div class="resi-form-container">
+                    <div class="resi-form">
+                        <h3>Cek Tarif</h3>
+                        <form id="tracking-form">
+                            <input type="text" id="tracking-number" placeholder="Kota Asal" required>
+                            <input type="text" id="tracking-number" placeholder="Kota Tujuan" required>
+                            <input type="text" id="tracking-number" placeholder="Berat" required>
+                            <button class="btn" type="submit">Cari</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="fitur">
+            <div class="centered-services"> 
+                <h1>FITUR</h1>
+            </div>
+            <div class="photo-container">
+                <div class="photo">
+                    <img src="./assets/item2.png" alt="Photo 1">
+                </div>
+                <div class="photo">
+                    <img src="./assets/item3.png" alt="Photo 2">
+                </div>
+                <div class="photo">
+                    <img src="./assets/item4.png" alt="Photo 3">
+                </div>
+                <div class="photo">
+                    <img src="./assets/item5.png" alt="Photo 4">
+                </div>
+            </div>
+        </section>
+        <section id="contact-us">
+            <div class="centered-services"> 
+                <h1>Contact Us</h1>
+                <label for="name">Name :</label>
+                <input class="btn" type="text" id="name" style="margin-bottom: 10px;" placeholder="input name" required> <br>
+                <label for="email">Email : </label>
+                <input class="btn" type="text" id="email" style="margin-bottom: 10px;" placeholder="input email" required> 
+                <br>
+                <button class="button" onclick="addNewContact()">Submit</button> 
+                <div id="resi-details"></div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer-distributed" id="footer">
+            <div class="footer-left">
+                <a href="#" class="logo"><img src="./assets/logo-navbar-white.png" id="logoNav" width="50%" alt=""><span></span></a>
+            </div>
+
+             <div class="footer-center">
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p><span>Jl. Revou No. 18</span> Bogor, Indonesia</p>
+                    </div>
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>+62 8123 456 7890</p>
+                </div>
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="mailto:support@revexpress.com" style="text-decoration: none; color: #fff;">support@revexpress.com</a></p>
+                </div>
+            </div>
+
+            <div class="footer-right" >
+                <div>
+                    <a href="#" class="link-1" style="text-decoration: none; color: #fff;">Home</a>    
+                <div>
+                    <a style="text-decoration: none; color: #fff;" href="#centered-services" id="services-link">Services</a>
+                </div>
+                <div>
+                    <a style="text-decoration: none; color: #fff;" href="#fitur" id="fitur-link">Fitur</a>
+                </div>
+                <div>
+                    <a style="text-decoration: none; color: #fff;" href="#footer" id="about-link">About Us</a>
+                </div>
+                <div>
+                    <a style="text-decoration: none; color: #fff;" href="./login/login.html"id="login-link">Login</a>
+                </div>
+                    <!-- <p class="footer-links">
+                        <a href="#" class="link-1">Home</a>           
+                        <a href="#">Sevices</a>
+                        <a href="#">Fitur</a>
+                        <a href="#">About Us</a>
+                        <a href="#">Login</a>
+                        <a href="#">Register</a>
+                    </p> -->
+                    <div class="footer-icons">
+                      <a href="#"><i class="fa fa-facebook"></i></a>
+                      <a href="#"><i class="fa fa-linkedin"></i></a>
+                      <a href="#"><i class="fa fa-github"></i></a>  
+                    </div>
+            </div>
+    </footer>
+</body>
+<script src="./js/script.js"></script>
+<script src="./js/api.js"></script>
+</html>
